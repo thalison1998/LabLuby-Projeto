@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/LabLuby-Projeto/static/js/main.bc365d8d.chunk.js",
+    "main.js.map": "/LabLuby-Projeto/static/js/main.bc365d8d.chunk.js.map",
+    "runtime-main.js": "/LabLuby-Projeto/static/js/runtime-main.a3e0e655.js",
+    "runtime-main.js.map": "/LabLuby-Projeto/static/js/runtime-main.a3e0e655.js.map",
+    "static/js/2.b0bc13f5.chunk.js": "/LabLuby-Projeto/static/js/2.b0bc13f5.chunk.js",
+    "static/js/2.b0bc13f5.chunk.js.map": "/LabLuby-Projeto/static/js/2.b0bc13f5.chunk.js.map",
+    "index.html": "/LabLuby-Projeto/index.html",
+    "static/js/2.b0bc13f5.chunk.js.LICENSE.txt": "/LabLuby-Projeto/static/js/2.b0bc13f5.chunk.js.LICENSE.txt",
+    "static/media/arrow-left.e234b337.svg": "/LabLuby-Projeto/static/media/arrow-left.e234b337.svg",
+    "static/media/arrow-right.83dc8f23.svg": "/LabLuby-Projeto/static/media/arrow-right.83dc8f23.svg",
+    "static/media/background.59e6f3dc.jpg": "/LabLuby-Projeto/static/media/background.59e6f3dc.jpg",
+    "static/media/checkBox.cd57cd67.svg": "/LabLuby-Projeto/static/media/checkBox.cd57cd67.svg",
+    "static/media/client.c224996a.jpg": "/LabLuby-Projeto/static/media/client.c224996a.jpg",
+    "static/media/frame-car1.8972ec05.jpg": "/LabLuby-Projeto/static/media/frame-car1.8972ec05.jpg",
+    "static/media/frame-car2.e3966751.jpg": "/LabLuby-Projeto/static/media/frame-car2.e3966751.jpg",
+    "static/media/log-out.38d9cfe6.svg": "/LabLuby-Projeto/static/media/log-out.38d9cfe6.svg",
+    "static/media/logo-full.fe94f4b4.svg": "/LabLuby-Projeto/static/media/logo-full.fe94f4b4.svg",
+    "static/media/search.dde39e78.svg": "/LabLuby-Projeto/static/media/search.dde39e78.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3e0e655.js",
+    "static/js/2.b0bc13f5.chunk.js",
+    "static/js/main.bc365d8d.chunk.js"
+  ]
+}
