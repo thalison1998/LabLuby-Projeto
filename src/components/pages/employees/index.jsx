@@ -4,7 +4,7 @@ import { useFetch } from '../../../hooks/useFetch';
 import { getAll } from '../../../service/api';
 import { ControlIndex } from '../../controlIndex';
 import { Header } from "../../header";
-import { Table, List } from "../totalVehicles/styles";
+import { Table} from "../totalVehicles/styles";
 import { Container, ContainerTable, ListEmployees, Main, Wrapper } from "./styles";
 
 export const Employees = () => {
