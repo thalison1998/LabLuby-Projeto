@@ -58,7 +58,7 @@ const Login = () => {
   React.useEffect(() => {
     const user = getUserStorage();
     if (user) {
-      navigation("/Home");
+      navigation("Home");
     }
   }, [navigation]);
 
