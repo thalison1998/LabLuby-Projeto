@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuth } from "../../../context/AuthProvider/useAuth";
 import { useFetch } from "../../../hooks/useFetch";
-import { getEmployees } from "../../../service/api";
+import { getAll } from "../../../service/api";
 import { ControlIndex } from "../../controlIndex";
 import { Header } from "../../header";
 import { List, Table } from "../totalVehicles/styles";
@@ -25,7 +25,7 @@ export const ReservedAndSold = () => {
   React.useEffect(() => {
     if (token) {
       (async () => {
-        const { url, options } = getEmployees(token, "vehicles");
+        const { url, options } = getAll(token, "vehicles");
         const { response } = await request(
           url + `?page=${pageNumber}`,
           options

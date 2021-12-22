@@ -7,7 +7,7 @@ export const ApiLogin = axios.create({
 })
 
 
-export const getEmployees = (token, direction) => {
+export const getAll = (token, direction) => {
   return {
     url: url + direction,
     options: {
