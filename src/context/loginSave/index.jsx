@@ -5,7 +5,7 @@ export const LoginSaveContext = createContext();
 export const LoginSaveProvider = ({ children }) => {
 
     const [checked, setChecked] = React.useState(JSON.parse(localStorage.getItem('check') !== null ?
-    JSON.parse(localStorage.getItem('check')):false))
+    JSON.parse(localStorage.getItem('check')):true))
     
 
     const  handleCheckboxChange = () =>{ 
