@@ -45,7 +45,7 @@ export const Home = () => {
               <img src={frameCar2} alt="Imagem de carro número 2" />
             </Link>
 
-            <Link to="x" className="item-menu">
+            <Link to="funcionarios" className="item-menu">
               <div className="wrapper">
                 <div>
                     <h2>Funcionários da empresa</h2>

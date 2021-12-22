@@ -9,6 +9,7 @@ import { LoginSaveProvider } from "./context/loginSave";
 import { Home } from "./components/pages/home";
 import { TotalVehicles } from "./components/pages/totalVehicles";
 import { ReservedAndSold } from "./components/pages/reservedAndSold";
+import { Employees } from "./components/pages/employees";
 export const  App = () => {
 
   
@@ -25,6 +26,9 @@ export const  App = () => {
 
           <Route path="LabLuby-Projeto/Home/veiculosVendidos&Reservados" element={<ProtectLayout 
           ProtectComponent={<ReservedAndSold/>}/>} />
+
+          <Route path="LabLuby-Projeto/Home/funcionarios" element={<ProtectLayout 
+          ProtectComponent={<Employees/>}/>} />
 
           <Route path="/LabLuby-Projeto"   element={<Login />} end />
         </Routes>

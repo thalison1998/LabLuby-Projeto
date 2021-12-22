@@ -1,19 +1,5 @@
 import styled from "styled-components";
 
-const vendido = {
-    color:'#F54A48',
-    background:'#F54A4833'
-}
-
-const disponivel = {
-    color:'#34C38F',
-    background:'#34C38F33',
-}
-const reservado = {
-    color:'#FAC12F',
-    background:'#FAC12F33',
-}
-
 export const Main = styled.main`
   max-width: 1620px;
   margin: 45px auto 0 auto;
@@ -39,38 +25,26 @@ export const ContainerTable = styled.div `
     border-radius: 3px;
     border:1px solid var(--inputBorder);
     box-shadow: 0px 0px 6px rgba(162, 162, 162, 0.25);
-  
 
-`
-export const Wrapper = styled.div ` 
-    display: flex;
-    justify-content: space-between;
-`
-
-export const Table = styled.div `
-margin-top: 20px;
-
-
- .wrapper-table{
+    .wrapper-table-employees{
      display: grid;
-     grid-template-columns:repeat(8, 102px);
+     grid-template-columns: repeat(4,minmax(100px, 150px)) 2fr;
      margin:25px 0 50px 0;
      font-size:1.6rem;
      font-weight: 500;
      color: #495057;
      justify-content: space-between;
-    align-items:center;
-    gap:10px;
+     align-items:center;
+     gap:20px;
      .center{
     padding: 6px 0;
     text-align:center;
     }
- 
- }
- .head-table{
+}
+    .head-table-employees{
     display: grid;
-    gap:10px;
-    grid-template-columns:repeat(8, 102px);
+    grid-template-columns: repeat(4,minmax(100px, 150px)) 2fr;
+    gap:20px;
     background-color: var(--inputBackground);
     padding:26px 0;
     border-radius: 3px;
@@ -79,24 +53,19 @@ margin-top: 20px;
     color:var(--colorTextBasic);
     font-size:1.3rem;
     justify-content: space-between;
-    .center{
+         .center{
     text-align:center;
-}
- }
-`
-export const List = styled.li ` 
-border-radius:3px;
-${(props) => {
-    switch(props.children){
-        case 'Vendido':
-            return vendido
-        case 'Disponível':
-            return disponivel
-        case 'Reservado':
-            return reservado
-        default:
-            return ''
+        }
     }
-}}
+`
+export const Wrapper = styled.div ` 
+    display: flex;
+    justify-content: space-between;
+`
+
+export const Table = styled.div `
+margin-top: 20px;
+`
+export const ListEmployees = styled.li ` 
 
 `
