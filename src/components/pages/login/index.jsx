@@ -96,7 +96,7 @@ const Login = () => {
                 control={control}
                 render={({ field: { value, onChange, onBlur } }) => (
                   <Input
-                    type="email"
+                    type="text"
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}

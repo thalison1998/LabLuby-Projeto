@@ -81,7 +81,10 @@ export const Employees = () => {
                         <ListEmployees>{name}</ListEmployees>
                         <ListEmployees>{email}</ListEmployees>
                         <ListEmployees>{cpf}</ListEmployees>
-                        <ListEmployees>{salary}</ListEmployees>
+                        <ListEmployees>{new Intl.NumberFormat('pt-BR', {
+                 style:'currency',
+                 currency:'BRL'
+               }).format(salary)}</ListEmployees>
                         <ListEmployees>{bio}</ListEmployees>
                       </div>
                     )

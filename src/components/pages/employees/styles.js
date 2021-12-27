@@ -28,14 +28,14 @@ export const ContainerTable = styled.div `
 
     .wrapper-table-employees{
      display: grid;
-     grid-template-columns: repeat(4,minmax(100px, 150px)) 2fr;
+     grid-template-columns: repeat(4,minmax(120px,170px)) 2fr;
      margin:25px 0 50px 0;
      font-size:1.6rem;
      font-weight: 500;
      color: #495057;
      justify-content: space-between;
      align-items:center;
-     gap:20px;
+     gap:10px;
      .center{
     padding: 6px 0;
     text-align:center;
@@ -43,8 +43,8 @@ export const ContainerTable = styled.div `
 }
     .head-table-employees{
     display: grid;
-    grid-template-columns: repeat(4,minmax(100px, 150px)) 2fr;
-    gap:20px;
+    grid-template-columns: repeat(4,minmax(120px,170px)) 2fr;
+    gap:10px;
     background-color: var(--inputBackground);
     padding:26px 0;
     border-radius: 3px;

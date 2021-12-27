@@ -49,7 +49,6 @@ export const ReservedAndSold = () => {
     }
   };
 
-  
   return (
     <>
       <Header />
@@ -100,7 +99,12 @@ export const ReservedAndSold = () => {
                         <List>{color}</List>
                         <List className="center bg-red">{status}</List>
                         <List>{chassi.slice(0, 3)}</List>
-                        <List>{value}</List>
+                        <List>
+                          {new Intl.NumberFormat("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                          }).format(value)}
+                        </List>
                       </div>
                     )
                   )}

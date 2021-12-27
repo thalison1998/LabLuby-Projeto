@@ -5,7 +5,14 @@ import { getAll } from "../../../service/api";
 import { ControlIndex } from "../../controlIndex";
 import { Header } from "../../header";
 
-import { Container, Main, ContainerTable, Wrapper, Table, List } from "./styles";
+import {
+  Container,
+  Main,
+  ContainerTable,
+  Wrapper,
+  Table,
+  List,
+} from "./styles";
 
 export const TotalVehicles = () => {
   const { token } = useAuth();
@@ -23,22 +30,21 @@ export const TotalVehicles = () => {
           options
         );
         setSelect(response.data.vehicles);
-        
       })();
     }
   }, [token, request, pageNumber]);
 
   const handleOnchange = ({ target }) => {
     const filt = info.vehicles.filter((item) =>
-      item.model.includes(target.value )
+      item.model.includes(target.value)
     );
     setSelect(filt);
   };
-console.log(error)
+  console.log(error);
 
   return (
     <>
-      <Header/>
+      <Header />
       <Main>
         <Container>
           <h1>Todos Veículos</h1>
@@ -52,7 +58,7 @@ console.log(error)
                 pageNumber={pageNumber}
               />
             </Wrapper>
-            
+
             <Table>
               <ul className="head-table">
                 <li>marca</li>
@@ -61,7 +67,7 @@ console.log(error)
                 <li>km</li>
                 <li>cor</li>
                 <li className="center">status</li>
-                <li >chassi</li>
+                <li>chassi</li>
                 <li>valor</li>
               </ul>
               <ul>
@@ -80,12 +86,17 @@ console.log(error)
                       <div key={chassi} className="wrapper-table">
                         <List>{brand}</List>
                         <List>{model}</List>
-                        <List className="center" >{yer}</List>
+                        <List className="center">{yer}</List>
                         <List>{km}</List>
                         <List>{color}</List>
                         <List className="center bg-red">{status}</List>
-                        <List >{chassi.slice(0,3)}</List>
-                        <List >{value}</List>
+                        <List>{chassi.slice(0, 3)}</List>
+                        <List>
+                          {new Intl.NumberFormat("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                          }).format(value)}
+                        </List>
                       </div>
                     )
                   )}

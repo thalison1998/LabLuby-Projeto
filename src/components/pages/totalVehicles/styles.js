@@ -53,7 +53,7 @@ margin-top: 20px;
 
  .wrapper-table{
      display: grid;
-     grid-template-columns:repeat(8, 102px);
+     grid-template-columns:repeat(8, minmax(80px, 102px));
      margin:25px 0 50px 0;
      font-size:1.6rem;
      font-weight: 500;
@@ -70,7 +70,7 @@ margin-top: 20px;
  .head-table{
     display: grid;
     gap:10px;
-    grid-template-columns:repeat(8, 102px);
+    grid-template-columns:repeat(8, minmax(80px, 102px));
     background-color: var(--inputBackground);
     padding:26px 0;
     border-radius: 3px;
@@ -97,6 +97,6 @@ ${(props) => {
         default:
             return ''
     }
-}}
+} }
 
 `
