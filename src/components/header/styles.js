@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.header `
 padding:31.5px 0;
 background:var(--background);
@@ -12,23 +13,40 @@ display: flex;
 justify-content:space-between;
 align-items:center;
 padding: 0 10px;
+   div{
+    width:430px;
+   }
+   h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color:var(--red)
+   }
+`
 
-   button{
+export const Button = styled.button ` 
        color:var(--background);
-       background-color:var(--red);
+       background-color: var(--red);
        height:38px;
        padding:10px;
        font-size:1.4rem;
        font-weight:700;
        border:none;
-       display:flex;
-       align-items: center;
+       display: flex;
        border-radius:3px;
+        @media (max-width:920px){
+            height:inherit;
+            padding:inherit;
+            background-color:transparent;
+        }
+
        img{
            margin-left:10px;
+           @media (max-width:920px){
+            margin-left: inherit;
+        }
        }
-   }
-   div{
-    width:430px;
-   }
 `

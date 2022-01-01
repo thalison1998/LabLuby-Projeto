@@ -7,6 +7,15 @@ export const Container = styled.div`
   grid-template-columns: 1fr minmax(350px,1fr);
   grid-template-rows:1fr;
  height: 100vh;
+       @media (max-width:760px){
+        grid-template-columns: 1fr;
+        img{
+          justify-self:center;
+          margin:inherit;
+          margin-top:58.28px;
+        }
+        
+    }
 `;
 
 export const Background = styled.div`
@@ -17,7 +26,7 @@ export const Background = styled.div`
 
 export const SectionForm = styled.section`
   display: grid;
-  grid-template-columns:minmax(350px,825px);
+  grid-template-columns:minmax(300px,825px);
   justify-content: center;
   align-self:start;
   grid-template-rows:60px auto;
@@ -36,6 +45,11 @@ display: grid;
 place-content:center center;
 gap:70px;
 align-self:start;
+
+@media (max-width:760px){
+  margin-top:39px;
+  padding:0 19px;
+}
 `
 
 export const InputContainer = styled.div`
@@ -48,12 +62,16 @@ export const SectionText = styled.div`
 h1{
     font-size:3.8rem;
     font-weight:700;
-    color:var(--black)
+    color:var(--black);
+    text-align:center;
 }
 p{
     color:var(--grey);
     font-size:1.2rem;
     font-weight: 700;
+      @media (max-width:760px){
+        text-align: center;
+    }
 }
 
 `;

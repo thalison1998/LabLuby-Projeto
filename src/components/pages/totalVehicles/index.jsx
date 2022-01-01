@@ -4,7 +4,8 @@ import { useFetch } from "../../../hooks/useFetch";
 import { getAll } from "../../../service/api";
 import { ControlIndex } from "../../controlIndex";
 import { Header } from "../../header";
-
+import { MobileTable } from "../../mobileTable";
+import useMediaResize from "../../../hooks/useMediaResize"
 import {
   Container,
   Main,
@@ -16,7 +17,8 @@ import {
 
 export const TotalVehicles = () => {
   const { token } = useAuth();
-
+  const mobile = useMediaResize('(max-width:920px)')
+  console.log(mobile)
   const { info, request, loading, error } = useFetch();
   const [select, setSelect] = React.useState([]);
   const [pageNumber, setPageNumber] = React.useState(1);
@@ -40,14 +42,13 @@ export const TotalVehicles = () => {
     );
     setSelect(filt);
   };
-  console.log(error);
 
   return (
     <>
-      <Header />
+      <Header titleHead="todos Veículos" />
       <Main>
         <Container>
-          <h1>Todos Veículos</h1>
+         {!mobile && <h1>Todos Veículos</h1>}
           <ContainerTable>
             <Wrapper>
               <h2>Listagem geral de veículos</h2>
@@ -59,7 +60,7 @@ export const TotalVehicles = () => {
               />
             </Wrapper>
 
-            <Table>
+            {!mobile ? <Table>
               <ul className="head-table">
                 <li>marca</li>
                 <li>modelo</li>
@@ -101,7 +102,8 @@ export const TotalVehicles = () => {
                     )
                   )}
               </ul>
-            </Table>
+            </Table>  : <MobileTable select={select}/>}
+            
           </ContainerTable>
         </Container>
       </Main>

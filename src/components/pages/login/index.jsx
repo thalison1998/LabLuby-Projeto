@@ -6,7 +6,7 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Input } from "../../input";
-
+import logoMobile from "../../../assets/logo-mobile.svg";
 import {
   Background,
   Container,
@@ -24,6 +24,7 @@ import { useLoginSave } from "../../../context/loginSave/useLoginSave";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { Button } from "../../button/styles";
 import { Error } from "../../helper/error";
+import useMediaResize from "../../../hooks/useMediaResize";
 
 
 const schema = yup
@@ -32,7 +33,7 @@ const schema = yup
     email: yup
       .string()
       .required("O campo é obrigatório.")
-      .email("E-mail inválido."),
+      .email("E-mail inválido, verifique novamente."),
     password: yup.string().required("O campo é obrigatório.").max(5),
   })
   .required();
@@ -40,7 +41,9 @@ const schema = yup
 const Login = () => {
   const { autheticate, loading, error } = useAuth();
   const { checked } = useLoginSave();
+  const mobile = useMediaResize('(max-width: 760px)');
 
+ 
   const [password, setPassword] = useLocalStorage("password", "");
 /*   const [passwordSave, setPasswordSave] = React.useState("");
  */
@@ -63,7 +66,6 @@ const Login = () => {
   }, [navigation]);
 
   const loginStart = (value) => {
-    console.log(errors);
     autheticate(value.email, value.password);
 
     if (checked) {
@@ -83,10 +85,10 @@ const Login = () => {
   return (
     <Container>
       <SectionForm>
-        <Logo />
+       { mobile?<img src={logoMobile} alt={'logo mobile'} />:<Logo />}
         <Wrapper>
           <SectionText>
-            <h1>Bem-vindo à AutoLuby</h1>
+           { mobile?<h1>Você está na AutoLuby</h1>:<h1>Bem-vindo à AutoLuby</h1>}
             <p>Faça o login para acessar sua conta.</p>
           </SectionText>
 
@@ -154,7 +156,7 @@ const Login = () => {
           </form>
         </Wrapper>
       </SectionForm>
-      <Background />
+      {!mobile && <Background />}
     </Container>
   );
 };

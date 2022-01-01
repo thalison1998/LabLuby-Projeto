@@ -10,33 +10,37 @@ import { Home } from "./components/pages/home";
 import { TotalVehicles } from "./components/pages/totalVehicles";
 import { ReservedAndSold } from "./components/pages/reservedAndSold";
 import { Employees } from "./components/pages/employees";
-export const  App = () => {
-
-  
+export const App = () => {
   return (
-      <BrowserRouter>
-       <AuthProvider>
-     
-         <LoginSaveProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <LoginSaveProvider>
           <Routes>
-          <Route path="LabLuby-Projeto/Home" element={<ProtectLayout ProtectComponent={<Home />}/>} />
-          
-          <Route path="LabLuby-Projeto/Home/veiculosTotais" element={<ProtectLayout 
-          ProtectComponent={<TotalVehicles />}/>} />
+            <Route
+              path="LabLuby-Projeto/Home"
+              element={<ProtectLayout ProtectComponent={<Home />} />}
+            />
 
-          <Route path="LabLuby-Projeto/Home/veiculosVendidos&Reservados" element={<ProtectLayout 
-          ProtectComponent={<ReservedAndSold/>}/>} />
+            <Route
+              path="LabLuby-Projeto/Home/veiculosTotais"
+              element={<ProtectLayout ProtectComponent={<TotalVehicles />} />}
+            />
 
-          <Route path="LabLuby-Projeto/Home/funcionarios" element={<ProtectLayout 
-          ProtectComponent={<Employees/>}/>} />
+            <Route
+              path="LabLuby-Projeto/Home/veiculosVendidos&Reservados"
+              element={<ProtectLayout ProtectComponent={<ReservedAndSold />} />}
+            />
 
-          <Route path="/LabLuby-Projeto"   element={<Login />} end />
-        </Routes>
+            <Route
+              path="LabLuby-Projeto/Home/funcionarios"
+              element={<ProtectLayout ProtectComponent={<Employees />} />}
+            />
+
+            <Route path="/LabLuby-Projeto" element={<Login />} end />
+          </Routes>
         </LoginSaveProvider>
-        </AuthProvider>
-        <GlobalStyles/>
-      </BrowserRouter>
+      </AuthProvider>
+      <GlobalStyles />
+    </BrowserRouter>
   );
-}
-
-
+};

@@ -43,7 +43,7 @@ export const Employees = () => {
 
     return (
         <>
-        <Header />
+        <Header titleHead="funcionários" />
         <Main>
         <Container>
           <h1>Funcionários</h1>

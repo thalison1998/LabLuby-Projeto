@@ -6,10 +6,11 @@ import { ControlIndex } from "../../controlIndex";
 import { Header } from "../../header";
 import { List, Table } from "../totalVehicles/styles";
 import { Container, ContainerTable, Main, Wrapper } from "./styles";
-
+import useMediaResize from "../../../hooks/useMediaResize"
+import {MobileTable }from '../../mobileTable'
 export const ReservedAndSold = () => {
   const { token } = useAuth();
-
+  const mobile = useMediaResize('(max-width:920px)')
   const { info, request, loading, error } = useFetch();
   const [select, setSelect] = React.useState([]);
   const [pageNumber, setPageNumber] = React.useState(1);
@@ -51,11 +52,11 @@ export const ReservedAndSold = () => {
 
   return (
     <>
-      <Header />
+      <Header titleHead="Seus Veículos" />
 
       <Main>
         <Container>
-          <h1>Seus Veículos</h1>
+          {!mobile && <h1>Seus Veículos</h1>}
           <ContainerTable>
             <Wrapper>
               <h2>Listagem de veículos reservados e vendidos</h2>
@@ -67,7 +68,7 @@ export const ReservedAndSold = () => {
               />
             </Wrapper>
 
-            <Table>
+           {!mobile ?<Table>
               <ul className="head-table">
                 <li>marca</li>
                 <li>modelo</li>
@@ -109,7 +110,7 @@ export const ReservedAndSold = () => {
                     )
                   )}
               </ul>
-            </Table>
+            </Table> : <MobileTable select={select}/>} 
           </ContainerTable>
         </Container>
       </Main>

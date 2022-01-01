@@ -13,10 +13,14 @@ const desative = {
 }
 
 export const ContainerIndex = styled.div ` 
-    width:559px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:920px){
+        flex-direction:column-reverse;
+        margin-bottom: 10px;
+    }
     
     .prev{
         background-color: #EDEDED;
@@ -43,6 +47,13 @@ export const ContainerIndex = styled.div `
     div{
         display: flex;
         align-items:center;
+
+        @media (max-width:920px) {   
+            width: 337px;
+            justify-content:space-between;
+            margin-top:10px;
+        }
+        
     }
     input {
         width:206px;
@@ -50,6 +61,9 @@ export const ContainerIndex = styled.div `
         border-radius: 3px;
         border:var(--inputBorder) 1px solid;
         background-color: var(--inputBackground);
+        @media (max-width:920px) {   
+            width: 337px;
+        }
     }
     label{
         position: relative;

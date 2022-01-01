@@ -31,6 +31,12 @@ export const Container = styled.section `
  h2{
      font-size: 2rem;
      font-weight: 600;
+     @media (max-width:920px) {   
+            font-size:2.4rem;
+            text-align: left;
+            margin-bottom:17px;
+            color:var(--black);
+        }
  }
 `
 export const ContainerTable = styled.div `
@@ -39,12 +45,19 @@ export const ContainerTable = styled.div `
     border-radius: 3px;
     border:1px solid var(--inputBorder);
     box-shadow: 0px 0px 6px rgba(162, 162, 162, 0.25);
-  
+    @media (max-width:920px){
+        background-color: var(--inputBackground);
+        
+    }
 
 `
 export const Wrapper = styled.div ` 
     display: flex;
     justify-content: space-between;
+    @media (max-width:920px){
+        flex-direction:column;
+        justify-content:center;
+    }
 `
 
 export const Table = styled.div `

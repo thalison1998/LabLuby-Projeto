@@ -10,11 +10,11 @@ import { Container, SectionHome, Nav} from "./styles";
 
 export const Home = () => {
   const { data, loading } = useAuth();
-  console.log(data);
+
 
   return (
     <>
-      <Header search={true} />
+      <Header search={true} titleHead="Home" />
       <Container>
         {loading ? <p>Carregando...</p>: <SectionHome>
           
