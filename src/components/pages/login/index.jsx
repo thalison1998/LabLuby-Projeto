@@ -81,7 +81,7 @@ const Login = () => {
       localStorage.removeItem("password");
     }
   }, [checked, password]);
-
+console.log(error)
   return (
     <Container>
       <SectionForm>
@@ -131,6 +131,7 @@ const Login = () => {
                 defaultValue=""
               />
               <Error>{errors.password?.message}</Error>
+              {error && <Error>Dados incorretos</Error>}
             </InputContainer>
 
             <RememberPassword>
@@ -138,7 +139,7 @@ const Login = () => {
               <a href="*">Esqueceu a senha?</a>
             </RememberPassword>
 
-            {error && <Error>Dados incorretos</Error>}
+            
 
             {loading ? (
               <Button type="submit" disabled>

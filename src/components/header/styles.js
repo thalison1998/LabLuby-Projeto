@@ -13,8 +13,15 @@ display: flex;
 justify-content:space-between;
 align-items:center;
 padding: 0 10px;
-   div{
+   .search{
     width:430px;
+   }
+   .log-out{
+       display: flex;
+       align-items: center;
+   }
+   .mobile-search{
+       margin-right:24px;
    }
    h3{
     font-size: 1.4rem;

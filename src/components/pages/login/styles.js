@@ -89,10 +89,15 @@ a{
 export const CreateAnAccount = styled.div`
 margin-top:40px;
 margin-bottom:10px;
+
+
 p{
   color:var(--veryGrey);
   font-weight:500;
   font-size:1.4rem;
+  @media (max-width:760px){
+        text-align: center;
+    }
 }
 a{
   color:var(--red);

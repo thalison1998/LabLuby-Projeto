@@ -27,6 +27,8 @@ export const AuthProvider = ({ children }) => {
       }
     })();
   }, []);
+ 
+  const timeoutRef = React.useRef();
 
   const autheticate = async (email, password) => {
     setLoading(true);
@@ -43,7 +45,8 @@ export const AuthProvider = ({ children }) => {
      
     } catch (error) {
       setError(true);
-      setTimeout(() => setError(false), 2000);
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setError(false), 2000);
       
     } finally {
       setLoading(false);

@@ -7,6 +7,7 @@ export const Container = styled.main `
 
 export const SectionHome = styled.section `
    margin-bottom:10px;
+   padding: 0 16px;
     h1{
     font-size: 3rem;
     font-weight:700;
@@ -49,7 +50,9 @@ gap:20px;
     justify-content:space-between;
     flex:1;
     padding:30px;
-    
+    @media (max-width:660px) {
+      padding: 10px;
+    } 
       h2{
         color:#495057;
         font-weight: 700;
@@ -62,6 +65,17 @@ gap:20px;
         font-weight: 700;
         font-size: 1.3rem;
         color:var(--red)
-      }
+      };@media (max-width:660px) {
+   h2{
+    font-size: 14px;
+  }
+  p,span{
+    font-size:10px;
+  } 
+ 
+  
+}
 }}
+
+
 `
