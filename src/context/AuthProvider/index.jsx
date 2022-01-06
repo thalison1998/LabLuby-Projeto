@@ -31,17 +31,18 @@ export const AuthProvider = ({ children }) => {
   const timeoutRef = React.useRef();
 
   const autheticate = async (email, password) => {
-    setLoading(true);
+    
     try {
+      setLoading(true);
       const request = await ApiLogin.post("login", { email, password });
       const response = request.data;
-
       const payload = { token: response.token, email, password };
       setToken(payload);
       setUserStorage(payload);
       setData(response);
       setLoginIsOk(true)
       navigation("LabLuby-Projeto/Home");
+      setLoading(false)
      
     } catch (error) {
       setError(true);
@@ -50,6 +51,7 @@ export const AuthProvider = ({ children }) => {
       
     } finally {
       setLoading(false);
+      setError(false)
     }
   };
 

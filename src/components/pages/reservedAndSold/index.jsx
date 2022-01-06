@@ -8,10 +8,12 @@ import { List, Table } from "../totalVehicles/styles";
 import { Container, ContainerTable, Main, Wrapper } from "./styles";
 import useMediaResize from "../../../hooks/useMediaResize"
 import {MobileTable }from '../../mobileTable'
+import Head from "../../helper/head";
+import { Loading } from "../../helper/loading";
 export const ReservedAndSold = () => {
   const { token } = useAuth();
   const mobile = useMediaResize('(max-width:920px)')
-  const { info, request, loading, error } = useFetch();
+  const { info, request, loading } = useFetch();
   const [select, setSelect] = React.useState([]);
   const [pageNumber, setPageNumber] = React.useState(1);
 
@@ -49,11 +51,15 @@ export const ReservedAndSold = () => {
       filterStatus(filt);
     }
   };
-
+ 
+  if(loading) return <Loading />
   return (
     <>
       <Header titleHead="Seus Veículos" />
-
+      <Head
+        title="Veículos reservados e vendidos"
+        description="Home do site Dogs, com o feed de fotos."
+       />
       <Main>
         <Container>
           {!mobile && <h1>Seus Veículos</h1>}

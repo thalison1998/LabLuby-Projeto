@@ -81,7 +81,7 @@ const Login = () => {
       localStorage.removeItem("password");
     }
   }, [checked, password]);
-console.log(error)
+
   return (
     <Container>
       <SectionForm>

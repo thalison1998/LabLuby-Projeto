@@ -14,12 +14,13 @@ import {
   Table,
   List,
 } from "./styles";
+import Head from "../../helper/head";
+import { Loading } from "../../helper/loading";
 
 export const TotalVehicles = () => {
   const { token } = useAuth();
   const mobile = useMediaResize('(max-width:920px)')
-  console.log(mobile)
-  const { info, request, loading, error } = useFetch();
+  const { info, request, loading } = useFetch();
   const [select, setSelect] = React.useState([]);
   const [pageNumber, setPageNumber] = React.useState(1);
 
@@ -42,10 +43,17 @@ export const TotalVehicles = () => {
     );
     setSelect(filt);
   };
+  
+  if(loading) return <Loading />
 
   return (
-    <>
+    <> 
+      
       <Header titleHead="todos Veículos" />
+      <Head
+        title="Veículos geral"
+        description="Home do site Dogs, com o feed de fotos."
+       />
       <Main>
         <Container>
          {!mobile && <h1>Todos Veículos</h1>}

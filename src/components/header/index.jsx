@@ -9,6 +9,7 @@ import useMediaResize from '../../hooks/useMediaResize'
 import logOutMobile from "../../assets/log-out-mobile.svg"
 import prevMobile from "../../assets/chevron-left.svg"
 import { Link } from "react-router-dom";
+import Head from '../helper/head'
 
 export const Header = ({search, titleHead}) => {
     
@@ -16,7 +17,11 @@ export const Header = ({search, titleHead}) => {
      const mobile = useMediaResize('(max-width:920px)')
     
     return (
+        
        <Container>
+           <Head  
+           title="Home"
+           description="Página inicial" />
            <Wrapper>
                {mobile?<Link to="/LabLuby-Projeto/Home"><img src={prevMobile} alt="" />
                </Link>

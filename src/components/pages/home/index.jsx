@@ -13,8 +13,9 @@ import { Header } from "../../header/index";
 import { Container, SectionHome, Nav } from "./styles";
 
 export const Home = () => {
-  const { data, loading } = useAuth();
+  const { data } = useAuth();
 
+  
   return (
     <>
       <Header search={true} titleHead="Home" />
@@ -33,7 +34,7 @@ export const Home = () => {
                 {data && <span>{data.totalVehiclesLoggedUser} Veículos</span>}
               </div>
               <picture>
-                <source media="(max-width:660px )" srcset={frameCarMobile1} />
+                <source media="(max-width:660px )" srcSet={frameCarMobile1} />
                 <img src={frameCar1} alt="Imagem de carro número 1" />
               </picture>
             </Link>
@@ -47,7 +48,7 @@ export const Home = () => {
                 {data && <span>{data.totalVehicles} Veículos</span>}
               </div>
               <picture>
-                <source media="(max-width:660px )" srcset={frameCarMobile2} />
+                <source media="(max-width:660px )" srcSet={frameCarMobile2} />
                 <img src={frameCar2} alt="Imagem de carro número 2" />
               </picture>
             </Link>
@@ -63,7 +64,7 @@ export const Home = () => {
               <picture>
                 <source
                   media="(max-width:660px )"
-                  srcset={employeesMobileImg}
+                  srcSet={employeesMobileImg}
                 />
                 <img src={employeesImg} alt="Imagem de funcionario" />
               </picture>
