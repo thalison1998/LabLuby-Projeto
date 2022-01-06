@@ -10,7 +10,9 @@ export const Main = styled.main`
     color: var(--black);
     display: block;
     margin-bottom: 5px;
+   
   }
+ 
 `;
 
 export const Container = styled.section `

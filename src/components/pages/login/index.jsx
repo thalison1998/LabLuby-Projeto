@@ -25,6 +25,7 @@ import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { Button } from "../../button/styles";
 import { Error } from "../../helper/error";
 import useMediaResize from "../../../hooks/useMediaResize";
+import Head from "../../helper/head";
 
 
 const schema = yup
@@ -84,11 +85,14 @@ const Login = () => {
 
   return (
     <Container>
+      <Head title="Login" description="Página de login" />
       <SectionForm>
        { mobile?<img src={logoMobile} alt={'logo mobile'} />:<Logo />}
         <Wrapper>
           <SectionText>
-           { mobile?<h1>Você está na AutoLuby</h1>:<h1>Bem-vindo à AutoLuby</h1>}
+           { mobile?<h1>Você está na <span style={{color:'#F54A48'}}
+           className="mobile-span">AutoLuby</span></h1>:
+           <h1>Bem-vindo à AutoLuby</h1>}
             <p>Faça o login para acessar sua conta.</p>
           </SectionText>
 

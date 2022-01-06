@@ -11,7 +11,6 @@ import { TotalVehicles } from "./components/pages/totalVehicles";
 import { ReservedAndSold } from "./components/pages/reservedAndSold";
 import { Employees } from "./components/pages/employees";
 import { NotFound } from "./components/helper/notFound";
-
 export const App = () => {
   return (
     <BrowserRouter>

@@ -10,10 +10,11 @@ import useMediaResize from "../../../hooks/useMediaResize"
 import {MobileTable }from '../../mobileTable'
 import Head from "../../helper/head";
 import { Loading } from "../../helper/loading";
+
 export const ReservedAndSold = () => {
   const { token } = useAuth();
   const mobile = useMediaResize('(max-width:920px)')
-  const { info, request, loading } = useFetch();
+  const { info, request,  loading} = useFetch();
   const [select, setSelect] = React.useState([]);
   const [pageNumber, setPageNumber] = React.useState(1);
 
@@ -52,7 +53,11 @@ export const ReservedAndSold = () => {
     }
   };
  
-  if(loading) return <Loading />
+   
+
+
+{/* <Loading />  */}
+
   return (
     <>
       <Header titleHead="Seus Veículos" />
@@ -73,7 +78,8 @@ export const ReservedAndSold = () => {
                 pageNumber={pageNumber}
               />
             </Wrapper>
-
+          {loading ? <Loading/>:
+          <>
            {!mobile ?<Table>
               <ul className="head-table">
                 <li>marca</li>
@@ -116,7 +122,8 @@ export const ReservedAndSold = () => {
                     )
                   )}
               </ul>
-            </Table> : <MobileTable select={select}/>} 
+            </Table> : <MobileTable select={select}/>}
+            </> } 
           </ContainerTable>
         </Container>
       </Main>

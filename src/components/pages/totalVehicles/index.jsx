@@ -44,7 +44,7 @@ export const TotalVehicles = () => {
     setSelect(filt);
   };
   
-  if(loading) return <Loading />
+
 
   return (
     <> 
@@ -67,8 +67,9 @@ export const TotalVehicles = () => {
                 pageNumber={pageNumber}
               />
             </Wrapper>
-
-            {!mobile ? <Table>
+           {loading ?<Loading />:
+                  <>
+           {!mobile ? <Table>
               <ul className="head-table">
                 <li>marca</li>
                 <li>modelo</li>
@@ -111,6 +112,7 @@ export const TotalVehicles = () => {
                   )}
               </ul>
             </Table>  : <MobileTable select={select}/>}
+            </>}
             
           </ContainerTable>
         </Container>

@@ -45,7 +45,7 @@ export const Employees = () => {
     setSelect(filt);
   };
 
-  if(loading) return <Loading />
+ 
   
   return (
     <>
@@ -67,8 +67,8 @@ export const Employees = () => {
                 pageNumber={pageNumber}
               />
             </Wrapper>
-
-            {!mobile ? (
+            {loading ?<Loading />:
+              <>{!mobile ? (
               <Table>
                 <ul className="head-table-employees">
                   <li>Nome</li>
@@ -97,7 +97,8 @@ export const Employees = () => {
               </Table>
             ) : (
               <MobileTableEmployees select={select} />
-            )}
+            )}</>}
+           
           </ContainerTable>
         </Container>
       </Main>
