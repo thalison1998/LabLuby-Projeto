@@ -6,7 +6,6 @@ export const Container = styled.div`
   display: grid;
   place-items: center center;
 
-  filter:blur(.8px);
   .title-loading {
     font-size: 3.8rem;
     font-weight: 600;
@@ -15,6 +14,6 @@ export const Container = styled.div`
 
   }
   rect {
-    transition: opacity 500ms ease-in ;
+    transition: opacity 200ms ease-in ;
   }
 `;

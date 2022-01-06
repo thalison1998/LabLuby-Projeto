@@ -12,7 +12,7 @@ export const Loading = () => {
             else return 0;
           });
         }
-        const interval = setInterval(updateStep, 500);
+        const interval = setInterval(updateStep, 200);
        
         return () => {
           clearInterval(interval);
