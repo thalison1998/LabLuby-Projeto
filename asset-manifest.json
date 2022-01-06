@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/LabLuby-Projeto/static/js/main.88653f1f.chunk.js",
-    "main.js.map": "/LabLuby-Projeto/static/js/main.88653f1f.chunk.js.map",
+    "main.js": "/LabLuby-Projeto/static/js/main.5a060f95.chunk.js",
+    "main.js.map": "/LabLuby-Projeto/static/js/main.5a060f95.chunk.js.map",
     "runtime-main.js": "/LabLuby-Projeto/static/js/runtime-main.08870a45.js",
     "runtime-main.js.map": "/LabLuby-Projeto/static/js/runtime-main.08870a45.js.map",
     "static/js/2.da694709.chunk.js": "/LabLuby-Projeto/static/js/2.da694709.chunk.js",
@@ -29,6 +29,6 @@
   "entrypoints": [
     "static/js/runtime-main.08870a45.js",
     "static/js/2.da694709.chunk.js",
-    "static/js/main.88653f1f.chunk.js"
+    "static/js/main.5a060f95.chunk.js"
   ]
 }
