@@ -9,7 +9,7 @@ export const ProtectLayout = ({ProtectComponent}) => {
     if(!loginIsOk && !token ) return <h1>Você não possui acesso</h1>
 
     if(loading) return <Loading />
-    console.log(loading)
+    
     return (
         <>
           {ProtectComponent}        
