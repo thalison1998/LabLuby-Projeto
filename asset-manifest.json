@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/LabLuby-Projeto/static/js/main.5a060f95.chunk.js",
-    "main.js.map": "/LabLuby-Projeto/static/js/main.5a060f95.chunk.js.map",
+    "main.js": "/LabLuby-Projeto/static/js/main.a14c6b7c.chunk.js",
+    "main.js.map": "/LabLuby-Projeto/static/js/main.a14c6b7c.chunk.js.map",
     "runtime-main.js": "/LabLuby-Projeto/static/js/runtime-main.08870a45.js",
     "runtime-main.js.map": "/LabLuby-Projeto/static/js/runtime-main.08870a45.js.map",
-    "static/js/2.da694709.chunk.js": "/LabLuby-Projeto/static/js/2.da694709.chunk.js",
-    "static/js/2.da694709.chunk.js.map": "/LabLuby-Projeto/static/js/2.da694709.chunk.js.map",
+    "static/js/2.df562b2d.chunk.js": "/LabLuby-Projeto/static/js/2.df562b2d.chunk.js",
+    "static/js/2.df562b2d.chunk.js.map": "/LabLuby-Projeto/static/js/2.df562b2d.chunk.js.map",
     "index.html": "/LabLuby-Projeto/index.html",
-    "static/js/2.da694709.chunk.js.LICENSE.txt": "/LabLuby-Projeto/static/js/2.da694709.chunk.js.LICENSE.txt",
+    "static/js/2.df562b2d.chunk.js.LICENSE.txt": "/LabLuby-Projeto/static/js/2.df562b2d.chunk.js.LICENSE.txt",
     "static/media/arrow-left.e234b337.svg": "/LabLuby-Projeto/static/media/arrow-left.e234b337.svg",
     "static/media/arrow-right.83dc8f23.svg": "/LabLuby-Projeto/static/media/arrow-right.83dc8f23.svg",
     "static/media/background.59e6f3dc.jpg": "/LabLuby-Projeto/static/media/background.59e6f3dc.jpg",
@@ -28,7 +28,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.08870a45.js",
-    "static/js/2.da694709.chunk.js",
-    "static/js/main.5a060f95.chunk.js"
+    "static/js/2.df562b2d.chunk.js",
+    "static/js/main.a14c6b7c.chunk.js"
   ]
 }
