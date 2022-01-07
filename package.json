@@ -2,7 +2,7 @@
   "name": "labluby-projeto",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thalison1998.github.io/LabLuby-Projeto",
+  "homepage": "https://thalison1998.github.io/",
   "dependencies": {
     "@hookform/resolvers": "^2.8.5",
     "@testing-library/jest-dom": "^5.11.4",
