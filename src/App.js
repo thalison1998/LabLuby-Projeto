@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter} from "react-router-dom";
+import { HashRouter} from "react-router-dom";
 
 import { GlobalStyles } from "./styles/global";
 import { AuthProvider } from "./context/AuthProvider";
@@ -9,7 +9,7 @@ import { ContainerRoutes } from "./Routes";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter >
       <AuthProvider>
         <LoginSaveProvider>
 
@@ -18,6 +18,6 @@ export const App = () => {
         </LoginSaveProvider>
       </AuthProvider>
       <GlobalStyles />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
