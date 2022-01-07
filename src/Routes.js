@@ -12,26 +12,26 @@ export const ContainerRoutes = () => {
     return (
         <Routes>
         <Route
-          path="Home"
+          path="LabLuby-Projeto/Home"
           element={<ProtectLayout ProtectComponent={<Home />} />}
         />
 
         <Route
-          path="Home/veiculosTotais"
+          path="LabLuby-Projeto/Home/veiculosTotais"
           element={<ProtectLayout ProtectComponent={<TotalVehicles />} />}
         />
 
         <Route
-          path="Home/veiculosVendidos&Reservados"
+          path="LabLuby-Projeto/Home/veiculosVendidos&Reservados"
           element={<ProtectLayout ProtectComponent={<ReservedAndSold />} />}
         />
 
         <Route
-          path="Home/funcionarios"
+          path="LabLuby-Projeto/Home/funcionarios"
           element={<ProtectLayout ProtectComponent={<Employees />} />}
         />
 
-        <Route path="/" element={<Login />} end />
+        <Route path="/LabLuby-Projeto" element={<Login />} end />
         <Route path="*" element={<NotFound />} />
       </Routes>
     )
