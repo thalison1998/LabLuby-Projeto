@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
       setUserStorage(payload);
       setData(response);
       setLoginIsOk(true)
-      navigation("LabLuby-Projeto/Home");
+      navigation("Home");
       setLoading(false)
      
     } catch (error) {
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     window.localStorage.removeItem("user");
     setLoginIsOk(false)
-    navigation("/LabLuby-Projeto");
+    navigation("/");
     
   };
 
