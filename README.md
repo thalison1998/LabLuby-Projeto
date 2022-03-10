@@ -21,7 +21,7 @@ Todo projeto faz parte da prova para vaga de desenvolvedor jr na empresa Luby: h
 <li>React-hook-form</li>
 </ul>
 
-## :📈: Requisitos funcionais
+## 📈 Requisitos funcionais
 
 ### RF01 - Autenticação ✅
 
