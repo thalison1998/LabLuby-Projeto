@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const url = 'https://autoluby.dev.luby.com.br/';
+const url = 'https://autoluby.k8s.luby.me/';
 
 export const ApiLogin = axios.create({
-  baseURL: "https://autoluby.dev.luby.com.br/"
+  baseURL: "https://autoluby.k8s.luby.me/"
 })
 
 
